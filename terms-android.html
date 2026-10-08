@@ -20,8 +20,8 @@
       --line: #e2e8f0;
       --bg: #f8fafc;
       --card: #ffffff;
-      --brand: #b45309;
-      --brand-soft: #fffbeb;
+      --brand: #08646C;
+      --brand-soft: #EDFCFD;
       --warn-bg: #fef2f2;
       --warn-line: #fecaca;
       --warn-ink: #7f1d1d;
@@ -122,6 +122,22 @@
     @media print {
       body { background: #fff; padding: 0; }
       header, main { border: none; border-radius: 0; padding: 0; }
+    }
+    /* The brand, as the owner approved it (the design «الصفحات القانونية بالهوية البصرية», «طبّقه»,
+       2026-10-08): a deep-teal header and footer, the cyan badge and section numbers. The text is untouched. */
+    header { background: linear-gradient(135deg, #06343A, #08646C); border-color: transparent; color: #F5F7FA; }
+    header h1 { color: #FFFFFF; }
+    header .sub { color: #A6EDF1; }
+    .kicker { background: #00D1DB; color: #06343A; }
+    h2 { color: #06343A; border-bottom-color: #A6EDF1; }
+    h2 .num { background: #06343A; color: #00D1DB; }
+    h3 { color: #08646C; }
+    footer { background: #06343A; color: #A6EDF1; border-radius: 16px; padding: 1rem; }
+
+    @media print {
+      header, footer { background: none; color: var(--ink); }
+      header h1 { color: var(--ink); }
+      header .sub, footer { color: var(--faint); }
     }
   </style>
 </head>
